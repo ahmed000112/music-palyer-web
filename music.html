@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Music Player Web</h1>
+    </header>
+    <div class="cd-container">
+        <div class="cd"></div>
+    </div>
+    <div class="controls">
+        <button class="prev" onclick="prevTrack()">|&lt;</button>
+        <button class="play" onclick="togglePlay()">/&gt;</button>
+        <button class="next" onclick="nextTrack()">&gt;|</button>
+    </div>
+    <div class="audio-selector" id="audio-selector">
+        <button onclick="showAudioMenu()">Studio</button>
+        <div id="audio-menu" style="display: none;">
+            <h2>Upload Audio Files</h2>
+            <input type="file" id="audio-file" accept="audio/*" multiple />
+            <button onclick="saveAudio()">Save</button>
+             <button onclick="deleteAllAudio()">Delete All</button> <!-- New button to delete all files -->
+            <ul id="audio-list">
+            </ul>
+        </div>
+    </div>
+    <audio id="audio-player" controls>
+        <source id="audio-source" src="englishSong.mpeg" type="audio/mpeg"> <!-- Set your audio file here -->
+        Your browser does not support the audio element.
+    </audio>
+    <footer>
+        <p>All rights reserved by Ahmed</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
